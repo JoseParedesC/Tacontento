@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tacontento · Auténtico sabor mexicano</title>
+  <meta name="description" content="Pide tus tacos en Tacontento: arma tu pedido en línea y envíalo por WhatsApp.">
+  <meta name="theme-color" content="#b20d0b">
+  <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Sprite de iconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></symbol>
+    <symbol id="i-vol-high" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4Z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-vol-low" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4Z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-vol-mute" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4Z" fill="currentColor"/><path d="m16 9.5 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.1 10.2a1.5 1.5 0 0 0 1.5 1.2h8.4a1.5 1.5 0 0 0 1.5-1.1L20.5 8H6.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.5" fill="currentColor"/><circle cx="16.5" cy="19.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l.8 12a1.5 1.5 0 0 0 1.5 1.4h6.4a1.5 1.5 0 0 0 1.5-1.4l.8-12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#menu">Saltar al menú</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Tacontento, ir al inicio">
+        <img src="assets/img/logo-160.png" alt="" width="44" height="47">
+        <span class="brand__name">Tacontento</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+      </nav>
+      <button class="cart-toggle" type="button" id="cartToggle" aria-controls="cart" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg>
+        <span class="cart-toggle__label">Tu pedido</span>
+        <span class="badge" id="cartBadge" aria-live="polite">0</span>
+      </button>
+    </div>
+    <div class="papel-picado" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title">Pide tus tacos y quédate contento.</h1>
+          <p class="hero__lead">Recetas tradicionales, ingredientes frescos y mucho cariño en cada taco. Arma tu pedido aquí y lo recibimos directo por WhatsApp.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu">Ver el menú</a>
+            <a class="btn btn--ghost" id="heroWhatsapp" href="#" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Escríbenos
+            </a>
+          </div>
+        </div>
+        <div class="hero__logo">
+          <img src="assets/img/logo-900.png" alt="Tacontento: un taco sonriente con sombrero y bigote. Auténtico sabor mexicano." width="900" height="958" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ + CARRITO -->
+    <section id="menu" class="order wrap" aria-labelledby="menuTitle">
+      <div class="menu">
+        <header class="section-head">
+          <h2 id="menuTitle">El menú</h2>
+          <nav class="chips" id="menuChips" aria-label="Categorías del menú"></nav>
+        </header>
+        <div id="menuList" aria-live="polite">
+          <p class="state-msg">Cargando el menú…</p>
+        </div>
+      </div>
+
+      <aside class="cart" id="cart" aria-label="Tu pedido">
+        <div class="cart__head">
+          <h2>Tu pedido</h2>
+          <button class="icon-btn cart__close" type="button" id="cartClose" aria-label="Cerrar pedido">
+            <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+          </button>
+        </div>
+
+        <div class="cart__body">
+          <ul class="cart__items" id="cartItems"></ul>
+          <p class="cart__empty" id="cartEmpty">Tu pedido está vacío. Agrega algo del menú para empezar.</p>
+        </div>
+
+        <div class="cart__footer" id="cartFooter" hidden>
+          <div class="cart__total">
+            <span>Total</span>
+            <strong id="cartTotal">$0</strong>
+          </div>
+
+          <form class="checkout" id="checkoutForm" novalidate>
+            <div class="field">
+              <label for="custName">Tu nombre</label>
+              <input id="custName" name="name" type="text" autocomplete="name" required placeholder="¿A nombre de quién?">
+            </div>
+
+            <fieldset class="field field--radios">
+              <legend>¿Cómo lo recibes?</legend>
+              <label class="radio"><input type="radio" name="mode" value="Domicilio" checked><span>Domicilio</span></label>
+              <label class="radio"><input type="radio" name="mode" value="Recoger en local"><span>Recoger</span></label>
+            </fieldset>
+
+            <div class="field" id="addressField">
+              <label for="custAddress">Dirección de entrega</label>
+              <input id="custAddress" name="address" type="text" autocomplete="street-address" placeholder="Calle, número, barrio">
+            </div>
+
+            <div class="field">
+              <label for="custNotes">Notas <span class="optional">(opcional)</span></label>
+              <textarea id="custNotes" name="notes" rows="2" placeholder="Sin cebolla, salsa aparte…"></textarea>
+            </div>
+
+            <p class="form-error" id="formError" role="alert" hidden></p>
+
+            <button class="btn btn--whatsapp" type="submit">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <button class="btn-link" type="button" id="cartClear">
+              <svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>
+              Vaciar pedido
+            </button>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="gallery-sec wrap" aria-labelledby="galTitle">
+      <h2 id="galTitle">Del comal a tu mesa</h2>
+      <!-- Reemplaza estas fotos por las del restaurante en assets/img/ -->
+      <div class="gallery">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&q=80&w=600" alt="Tacos recién hechos"></figure>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&q=80&w=600" alt="Nachos con guacamole"></figure>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=600" alt="Salsas y picante"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Tacontento © 2026 · Proyecto universitario (prototipo)</p>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <!-- Reproductor -->
+  <div class="player" id="player" role="group" aria-label="Música de fondo">
+    <button class="icon-btn player__play" type="button" id="playBtn" aria-label="Reproducir música">
+      <svg class="icon"><use href="#i-play"/></svg>
+    </button>
+    <button class="icon-btn" type="button" id="stopBtn" aria-label="Detener música">
+      <svg class="icon"><use href="#i-stop"/></svg>
+    </button>
+    <button class="icon-btn" type="button" id="muteBtn" aria-label="Silenciar">
+      <svg class="icon"><use href="#i-vol-low"/></svg>
+    </button>
+    <input class="player__vol" type="range" id="volume" min="0" max="1" step="0.01" value="0.3" aria-label="Volumen">
+  </div>
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-fab__text">Pedir por WhatsApp</span>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <audio id="bgMusic" src="assets/audio/cancion.mp3" loop preload="none"></audio>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

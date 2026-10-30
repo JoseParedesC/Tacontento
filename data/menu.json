@@ -1,0 +1,33 @@
+{
+  "business": {
+    "name": "Tacontento",
+    "tagline": "Auténtico sabor mexicano",
+    "whatsapp": "573108713659",
+    "currency": "COP",
+    "locale": "es-CO"
+  },
+  "categories": [
+    {
+      "id": "principales",
+      "name": "Opciones principales",
+      "description": "Para llegar con hambre y salir contento.",
+      "items": [
+        { "id": "tacoento", "name": "Tacoento", "description": "Un taco con su salsa.", "price": 6000 },
+        { "id": "tacontentos-combo", "name": "Tacontentos Combo", "description": "3 tacos y una bebida pequeña.", "price": 15000 },
+        { "id": "tacontentos-full", "name": "Tacontentos Full", "description": "4 tacos, bebida y nachos.", "price": 20000, "tag": "El más completo" }
+      ]
+    },
+    {
+      "id": "extras",
+      "name": "Extras",
+      "description": "Súbele el sabor a tu pedido.",
+      "items": [
+        { "id": "guacamole", "name": "Guacamole", "description": "Aguacate fresco, limón y cilantro.", "price": 2000 },
+        { "id": "queso-extra", "name": "Queso extra", "description": "Una porción más de queso.", "price": 1500 },
+        { "id": "salsa-especial", "name": "Salsa especial", "description": "La salsa de la casa.", "price": 1000 },
+        { "id": "bebida-sola", "name": "Bebida sola", "description": "Bebida del día.", "price": 4000 },
+        { "id": "taco-adicional", "name": "Taco adicional", "description": "Un taco más para tu pedido.", "price": 5000 }
+      ]
+    }
+  ]
+}
