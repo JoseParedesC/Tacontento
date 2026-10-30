@@ -212,7 +212,7 @@
   }
 
   function buildOrderMessage(customer) {
-    const lines = [`🌮 *Nuevo pedido · ${state.business.name}*`, ''];
+    const lines = [`*Nuevo pedido · ${state.business.name}*`, ''];
     lines.push(`*Cliente:* ${customer.name}`);
     lines.push(`*Entrega:* ${customer.mode}`);
     if (customer.mode === 'Domicilio') lines.push(`*Dirección:* ${customer.address}`);
